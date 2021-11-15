@@ -1,7 +1,9 @@
 package test;
 
 import core.BaseTest;
-import org.junit.Before;
+import io.restassured.RestAssured;
+import io.restassured.specification.FilterableRequestSpecification;
+import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -15,42 +17,33 @@ import static org.hamcrest.Matchers.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Cenarios extends BaseTest {
 
-    private int idConta;
-    private String TOKEN;
     private static String CONTA_NAME = "Conta" + System.nanoTime();
     private static Integer CONTA_ID;
     private static Integer MOVIMENTACAO_ID;
 
-    @Before
-    public void login() {
+    @BeforeClass
+    public static void login() {
+
         HashMap<String, String> login = new HashMap<String, String>();
         login.put("email", EMAIL);
         login.put("senha", SENHA);
 
-        TOKEN = given()
+        String TOKEN = given()
                 .body(login)
                 .when()
                 .post("/signin")
                 .then()
                 .statusCode(200)
                 .extract().path("token");
-    }
 
-    @Test
-    public void CT01_naoDeveAcessarSemTOKEN() {
-        given()
-                .when()
-                .get("/contas")
-                .then()
-                .statusCode(401)
-        ;
+        RestAssured.requestSpecification.header("Authorization", "JWT " + TOKEN);
     }
 
     @Test
     public void CT02_deveIncluirConta() {
+
         CONTA_ID = given()
-                .header("Authorization", "JWT " + TOKEN)
-                .body("{\"nome\" : \""+ CONTA_NAME +"\"}")
+                .body("{\"nome\" : \"" + CONTA_NAME + "\"}")
                 .when()
                 .post("/contas")
                 .then()
@@ -62,11 +55,11 @@ public class Cenarios extends BaseTest {
 
     @Test
     public void CT03_deveAlterarConta() {
-                given()
-                .header("Authorization", "JWT " + TOKEN)
-                .body("{\"nome\" : \""+CONTA_NAME+" alterada"+"\"}")
+
+        given()
+                .body("{\"nome\" : \"" + CONTA_NAME + " alterada" + "\"}")
                 .when()
-                .put("/contas/"+CONTA_ID)
+                .put("/contas/" + CONTA_ID)
                 .then()
                 .log().all()
                 .statusCode(200)
@@ -75,9 +68,9 @@ public class Cenarios extends BaseTest {
 
     @Test
     public void CT04_naoDeveIncluirContaNomeRepetido() {
+
         given()
-                .header("Authorization", "JWT " + TOKEN)
-                .body("{\"nome\" : \""+CONTA_NAME+" alterada"+"\"}")
+                .body("{\"nome\" : \"" + CONTA_NAME + " alterada" + "\"}")
                 .when()
                 .post("/contas")
                 .then()
@@ -89,10 +82,10 @@ public class Cenarios extends BaseTest {
 
     @Test
     public void CT05_deveInserirMovimentacaoComSucesso() {
+
         Movimentacao mov = getMovimentacaoValida();
 
         MOVIMENTACAO_ID = given()
-                .header("Authorization", "JWT " + TOKEN)
                 .body(mov)
                 .when()
                 .post("/transacoes")
@@ -104,8 +97,8 @@ public class Cenarios extends BaseTest {
 
     @Test
     public void CT06_deveValidarCamposObrigatoriosMovimentacao() {
+
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .when()
                 .post("/transacoes")
                 .then()
@@ -126,11 +119,11 @@ public class Cenarios extends BaseTest {
 
     @Test
     public void CT07_naoDeveCadastrarMovimentacaoFutura() {
+
         Movimentacao mov = getMovimentacaoValida();
         mov.setData_transacao(DataUtils.getDataDiferencaDias(2));
 
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .body(mov)
                 .when()
                 .post("/transacoes")
@@ -145,9 +138,8 @@ public class Cenarios extends BaseTest {
     public void CT08_naoDeveRemoverContaMovimentacao() {
 
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .when()
-                .pathParam("id",CONTA_ID)
+                .pathParam("id", CONTA_ID)
                 .delete("/contas/{id}")
                 .then()
                 .statusCode(500)
@@ -157,13 +149,13 @@ public class Cenarios extends BaseTest {
 
     @Test
     public void CT09_deveCalcularSaldoContas() {
+
         Movimentacao mov1 = getMovimentacaoValida();
         mov1.setValor(200.00f);
         Movimentacao mov2 = getMovimentacaoValida();
         mov2.setValor(300.00f);
 
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .body(mov1)
                 .when()
                 .post("/transacoes")
@@ -172,7 +164,6 @@ public class Cenarios extends BaseTest {
         ;
 
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .body(mov2)
                 .when()
                 .post("/transacoes")
@@ -181,13 +172,12 @@ public class Cenarios extends BaseTest {
         ;
 
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .when()
                 .get("/saldo")
                 .then()
                 .log().all()
                 .statusCode(200)
-                .body("find{it.conta_id == "+ CONTA_ID +"}.saldo", is("3000.00"))
+                .body("find{it.conta_id == " + CONTA_ID + "}.saldo", is("3000.00"))
         ;
     }
 
@@ -195,7 +185,6 @@ public class Cenarios extends BaseTest {
     public void CT10_deveRemoverTransacao() {
 
         given()
-                .header("Authorization", "JWT " + TOKEN)
                 .when()
                 .delete("/transacoes/" + MOVIMENTACAO_ID)
                 .then()
@@ -203,7 +192,21 @@ public class Cenarios extends BaseTest {
         ;
     }
 
-    public Movimentacao getMovimentacaoValida(){
+    @Test
+    public void CT11_naoDeveAcessarSemTOKEN() {
+        FilterableRequestSpecification req = (FilterableRequestSpecification) RestAssured.requestSpecification;
+        req.removeHeader("Authorization");
+
+        given()
+                .when()
+                .get("/contas")
+                .then()
+                .statusCode(401)
+        ;
+    }
+
+    public Movimentacao getMovimentacaoValida() {
+
         Movimentacao mov = new Movimentacao();
 
         mov.setConta_id(CONTA_ID);
