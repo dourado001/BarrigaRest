@@ -1,8 +1,8 @@
-package test;
+package pojo;
 
 public class Movimentacao {
 
-    private int id;
+    private Integer id;
     private String descricao;
     private String envolvido;
     private String tipo;
@@ -10,14 +10,22 @@ public class Movimentacao {
     private String data_pagamento;
     private float valor;
     private boolean status;
-    private int conta_id;
+    private Integer conta_id;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getConta_id() {
+        return conta_id;
+    }
+
+    public void setConta_id(Integer conta_id) {
+        this.conta_id = conta_id;
     }
 
     public String getDescricao() {
@@ -74,13 +82,5 @@ public class Movimentacao {
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    public int getConta_id() {
-        return conta_id;
-    }
-
-    public void setConta_id(int conta_id) {
-        this.conta_id = conta_id;
     }
 }

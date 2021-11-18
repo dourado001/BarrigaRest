@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5c54d3c-7ad3-4fe5-8faa-fde1d413ddbb" name="Default Changelist" comment="" />
+    <list default="true" id="b5c54d3c-7ad3-4fe5-8faa-fde1d413ddbb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cenarios/AuthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cenarios/ContasTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cenarios/MovimentacoesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cenarios/SaldoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cenarios/Suite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/BarrigaUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/Cenarios.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pojo/Movimentacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BarrigaRest.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/bin/target/classes/META-INF/BarrigaRest.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/Cenarios.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/Movimentacao.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +33,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="20QcM6g7b9eMwp8HtNamGN5aUTl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,91 +45,101 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Scanned Documents/Documents/restassured" />
   </component>
-  <component name="RunManager" selected="JUnit.Cenarios.naoDeveCadastrarMovimentacaoFutura">
-    <configuration name="teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.teste" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cenarios" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Suite">
+    <configuration name="MovimentacoesTest.deveCalcularSaldoContas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BarrigaRest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="cenarios.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="cenarios" />
+      <option name="MAIN_CLASS_NAME" value="cenarios.MovimentacoesTest" />
+      <option name="METHOD_NAME" value="deveCalcularSaldoContas" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cenarios" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovimentacoesTest.deveInserirMovimentacaoComSucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BarrigaRest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="cenarios.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.Cenarios" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Cenarios.deveInserirMovimentacaoComSucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BarrigaRest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.Cenarios" />
+      <option name="PACKAGE_NAME" value="cenarios" />
+      <option name="MAIN_CLASS_NAME" value="cenarios.MovimentacoesTest" />
       <option name="METHOD_NAME" value="deveInserirMovimentacaoComSucesso" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cenarios.deveValidarCamposObrigatoriosMovimentacao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovimentacoesTest.deveRemoverTransacao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BarrigaRest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="cenarios.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.Cenarios" />
-      <option name="METHOD_NAME" value="deveValidarCamposObrigatoriosMovimentacao" />
+      <option name="PACKAGE_NAME" value="cenarios" />
+      <option name="MAIN_CLASS_NAME" value="cenarios.MovimentacoesTest" />
+      <option name="METHOD_NAME" value="deveRemoverTransacao" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cenarios.naoDeveCadastrarMovimentacaoFutura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovimentacoesTest.naoDeveRemoverContaMovimentacao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BarrigaRest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="cenarios.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.Cenarios" />
-      <option name="METHOD_NAME" value="naoDeveCadastrarMovimentacaoFutura" />
+      <option name="PACKAGE_NAME" value="cenarios" />
+      <option name="MAIN_CLASS_NAME" value="cenarios.MovimentacoesTest" />
+      <option name="METHOD_NAME" value="naoDeveRemoverContaMovimentacao" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Suite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BarrigaRest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cenarios.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cenarios" />
+      <option name="MAIN_CLASS_NAME" value="cenarios.Suite" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Cenarios.naoDeveCadastrarMovimentacaoFutura" />
-        <item itemvalue="JUnit.Cenarios.deveValidarCamposObrigatoriosMovimentacao" />
-        <item itemvalue="JUnit.Cenarios.deveInserirMovimentacaoComSucesso" />
-        <item itemvalue="JUnit.Cenarios" />
-        <item itemvalue="Application.teste" />
+        <item itemvalue="JUnit.Suite" />
+        <item itemvalue="JUnit.MovimentacoesTest.deveRemoverTransacao" />
+        <item itemvalue="JUnit.MovimentacoesTest.deveCalcularSaldoContas" />
+        <item itemvalue="JUnit.MovimentacoesTest.naoDeveRemoverContaMovimentacao" />
+        <item itemvalue="JUnit.MovimentacoesTest.deveInserirMovimentacaoComSucesso" />
       </list>
     </recent_temporary>
   </component>
@@ -125,42 +157,58 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1636591856425">
+    <state x="275" y="27" key="#Notifications" timestamp="1637200635238">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1636591856425" />
-    <state width="1323" height="202" key="GridCell.Tab.0.bottom" timestamp="1636751390623">
+    <state x="275" y="27" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1637200635238" />
+    <state x="413" y="124" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1637197499564">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="202" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1636751390623" />
-    <state width="1323" height="202" key="GridCell.Tab.0.center" timestamp="1636751390623">
+    <state x="413" y="124" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1637197499564" />
+    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1636938326253">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="202" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1636751390623" />
-    <state width="1323" height="202" key="GridCell.Tab.0.left" timestamp="1636751390623">
+    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1636938326253" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1637205478312">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="202" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1636751390623" />
-    <state width="1323" height="202" key="GridCell.Tab.0.right" timestamp="1636751390623">
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1637205478312" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1637201247770">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="202" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1636751390623" />
-    <state width="1323" height="302" key="GridCell.Tab.1.bottom" timestamp="1635983313152">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1637201247770" />
+    <state width="1323" height="315" key="GridCell.Tab.0.bottom" timestamp="1637205547997">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1635983313152" />
-    <state width="1323" height="302" key="GridCell.Tab.1.center" timestamp="1635983313152">
+    <state width="1323" height="315" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1637205547997" />
+    <state width="1323" height="315" key="GridCell.Tab.0.center" timestamp="1637205547996">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1635983313152" />
-    <state width="1323" height="302" key="GridCell.Tab.1.left" timestamp="1635983313152">
+    <state width="1323" height="315" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1637205547996" />
+    <state width="1323" height="315" key="GridCell.Tab.0.left" timestamp="1637205547996">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1635983313152" />
-    <state width="1323" height="302" key="GridCell.Tab.1.right" timestamp="1635983313152">
+    <state width="1323" height="315" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1637205547996" />
+    <state width="1323" height="315" key="GridCell.Tab.0.right" timestamp="1637205547997">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1635983313152" />
+    <state width="1323" height="315" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1637205547997" />
+    <state width="1323" height="84" key="GridCell.Tab.1.bottom" timestamp="1636992686255">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1636992686255" />
+    <state width="1323" height="84" key="GridCell.Tab.1.center" timestamp="1636992686254">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1636992686254" />
+    <state width="1323" height="84" key="GridCell.Tab.1.left" timestamp="1636992686254">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1636992686254" />
+    <state width="1323" height="84" key="GridCell.Tab.1.right" timestamp="1636992686254">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="84" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1636992686254" />
     <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1636905692169">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
