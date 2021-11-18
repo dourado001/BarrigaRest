@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.parsing.Parser;
 import io.restassured.specification.ResponseSpecification;
 import org.hamcrest.Matchers;
 import org.junit.BeforeClass;
@@ -25,6 +26,7 @@ public class BaseTest implements Constantes {
 
         ResponseSpecBuilder respBuilder = new ResponseSpecBuilder();
         respBuilder.expectResponseTime(lessThan(MAX_TIMEOUT));
+        respBuilder.setDefaultParser(Parser.JSON);
         responseSpecification = respBuilder.build();
 
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
